@@ -47,9 +47,7 @@ jobs:
         with:
           ocaml-compiler: 4
       - run: |
-          git clone https://github.com/savonet/liquidsoap
-          cd liquidsoap
-          git checkout 44722cbeefe94688c460f45e5f654b8f2ce9a3e4
+          git clone https://github.com/savonet/liquidsoap -b rolling-release-v2.2.x
           opam pin --no-action --yes .
           sudo apt-get update
           opam install --yes liquidsoap
