@@ -25,20 +25,6 @@ jobs:
           opam install --yes liquidsoap 'camomile<2.0.0'
       - run: |
           opam exec -- liquidsoap main.liq
-  liquidsoap-20:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ocaml/setup-ocaml@v3
-        with:
-          ocaml-compiler: 4
-      - run: |
-          git clone https://github.com/savonet/liquidsoap -b rolling-release-v2.0.x --depth 1
-          opam pin --no-action --yes ./liquidsoap
-          sudo apt-get update
-          opam install --yes liquidsoap 'camomile<2.0.0'
-      - run: |
-          opam exec -- liquidsoap main.liq
   liquidsoap-21:
     runs-on: ubuntu-22.04
     steps:
