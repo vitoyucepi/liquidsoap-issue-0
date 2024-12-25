@@ -49,7 +49,7 @@ jobs:
       - run: |
           git clone https://github.com/savonet/liquidsoap
           cd liquidsoap
-          git checkout 004a3c7418f25c5004ecc99fc9b79a5bac2749ea
+          git checkout d7109c95ef2e1cda18a2bff4561a32103dc22f7a
           opam pin --no-action --yes .
           sudo apt-get update
           opam install --yes liquidsoap
