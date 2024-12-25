@@ -53,62 +53,6 @@ jobs:
           opam install --yes liquidsoap
       - run: |
           opam exec -- liquidsoap main.liq
-  liquidsoap-220:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ocaml/setup-ocaml@v3
-        with:
-          ocaml-compiler: 4
-      - run: |
-          git clone https://github.com/savonet/liquidsoap -b v2.2.0 --depth 1
-          opam pin --no-action --yes ./liquidsoap
-          sudo apt-get update
-          opam install --yes liquidsoap
-      - run: |
-          opam exec -- liquidsoap main.liq
-  liquidsoap-221:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ocaml/setup-ocaml@v3
-        with:
-          ocaml-compiler: 4
-      - run: |
-          git clone https://github.com/savonet/liquidsoap -b v2.2.1 --depth 1
-          opam pin --no-action --yes ./liquidsoap
-          sudo apt-get update
-          opam install --yes liquidsoap
-      - run: |
-          opam exec -- liquidsoap main.liq
-  liquidsoap-222:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ocaml/setup-ocaml@v3
-        with:
-          ocaml-compiler: 4
-      - run: |
-          git clone https://github.com/savonet/liquidsoap -b v2.2.2 --depth 1
-          opam pin --no-action --yes ./liquidsoap
-          sudo apt-get update
-          opam install --yes liquidsoap
-      - run: |
-          opam exec -- liquidsoap main.liq
-  liquidsoap-223:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ocaml/setup-ocaml@v3
-        with:
-          ocaml-compiler: 4
-      - run: |
-          git clone https://github.com/savonet/liquidsoap -b v2.2.3 --depth 1
-          opam pin --no-action --yes ./liquidsoap
-          sudo apt-get update
-          opam install --yes liquidsoap
-      - run: |
-          opam exec -- liquidsoap main.liq
   liquidsoap-224:
     runs-on: ubuntu-22.04
     steps:
@@ -118,6 +62,20 @@ jobs:
           ocaml-compiler: 4
       - run: |
           git clone https://github.com/savonet/liquidsoap -b v2.2.4 --depth 1
+          opam pin --no-action --yes ./liquidsoap
+          sudo apt-get update
+          opam install --yes liquidsoap
+      - run: |
+          opam exec -- liquidsoap main.liq
+  liquidsoap-225:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: 4
+      - run: |
+          git clone https://github.com/savonet/liquidsoap -b v2.2.5 --depth 1
           opam pin --no-action --yes ./liquidsoap
           sudo apt-get update
           opam install --yes liquidsoap
